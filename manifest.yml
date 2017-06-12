@@ -1,0 +1,7 @@
+applications:
+- name: demo-appsman
+  buildpack: java_buildpack
+  path: target/demo-appsman-0.0.1-SNAPSHOT.jar
+  services:
+  - demo-appsman-mysql    # cf create-service cleardb spark demo-appsman-mysql
+  - demo-appsman-rabbitmq # cf create-service cloudamqp lemur demo-appsman-rabbitmq
